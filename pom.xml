@@ -4,7 +4,17 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.cyan</groupId>
     <artifactId>coj-backend-microservice</artifactId>
+    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>coj-backend-common</module>
+        <module>coj-backend-model</module>
+        <module>coj-backend-service-client</module>
+        <module>coj-backend-user-service</module>
+        <module>coj-backend-question-service</module>
+        <module>coj-backend-judge-service</module>
+        <module>coj-backend-gateway</module>
+    </modules>
     <name>coj-backend-microservice</name>
     <description>在线判题项目微服务版本</description>
     <properties>
