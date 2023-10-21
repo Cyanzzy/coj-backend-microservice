@@ -1,6 +1,6 @@
 package com.cyan.springcloud.model.dto.questionsubmit;
 
-import com.cyan.springcloud.common.common.PageRequest;
+import com.cyan.springcloud.common.commons.PageRequest;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

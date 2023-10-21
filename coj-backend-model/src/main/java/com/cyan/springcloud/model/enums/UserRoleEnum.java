@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
  */
 public enum UserRoleEnum {
 
-    USER("用户", "user"),
+    USER("用户", "questionservice"),
     ADMIN("管理员", "admin"),
     BAN("被封号", "ban");
 

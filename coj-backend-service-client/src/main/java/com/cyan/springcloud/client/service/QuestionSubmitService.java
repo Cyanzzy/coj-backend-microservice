@@ -1,13 +1,13 @@
-package com.cyan.springcloud.judge.service;
+package com.cyan.springcloud.client.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.cyan.coj.model.dto.questionsubmit.QuestionSubmitAddRequest;
-import com.cyan.coj.model.dto.questionsubmit.QuestionSubmitQueryRequest;
-import com.cyan.coj.model.entity.QuestionSubmit;
-import com.cyan.coj.model.entity.User;
-import com.cyan.coj.model.vo.QuestionSubmitVO;
+import com.cyan.springcloud.model.dto.questionsubmit.QuestionSubmitAddRequest;
+import com.cyan.springcloud.model.dto.questionsubmit.QuestionSubmitQueryRequest;
+import com.cyan.springcloud.model.entity.QuestionSubmit;
+import com.cyan.springcloud.model.entity.User;
+import com.cyan.springcloud.model.vo.QuestionSubmitVO;
 
 /**
 * 针对表【question_submit(题目提交)】的数据库操作

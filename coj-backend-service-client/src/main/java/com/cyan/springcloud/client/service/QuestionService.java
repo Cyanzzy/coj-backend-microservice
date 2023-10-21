@@ -1,4 +1,4 @@
-package com.cyan.springcloud.judge.service;
+package com.cyan.springcloud.client.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -7,11 +7,10 @@ import com.cyan.springcloud.model.dto.question.QuestionQueryRequest;
 import com.cyan.springcloud.model.entity.Question;
 import com.cyan.springcloud.model.vo.QuestionVO;
 
-
 import javax.servlet.http.HttpServletRequest;
 
 /**
-* 针对表【question(题目)】的数据库操作Service
+* 针对表【questionservice(题目)】的数据库操作Service
  *
  * @author Cyan
 */

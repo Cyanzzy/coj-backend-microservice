@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * 题目封装类
- * @TableName question
+ * @TableName questionservice
  */
 @Data
 public class QuestionVO implements Serializable {

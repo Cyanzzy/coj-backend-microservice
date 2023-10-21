@@ -1,4 +1,4 @@
-package com.cyan.springcloud.common.common;
+package com.cyan.springcloud.common.commons;
 
 /**
  * 返回工具类

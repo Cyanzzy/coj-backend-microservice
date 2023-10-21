@@ -11,7 +11,7 @@ import java.util.Date;
  *
  * @author Cyan
  */
-@TableName(value = "user")
+@TableName(value = "questionservice")
 @Data
 public class User implements Serializable {
 
@@ -57,7 +57,7 @@ public class User implements Serializable {
     private String userProfile;
 
     /**
-     * 用户角色：user/admin/ban
+     * 用户角色：questionservice/admin/ban
      */
     private String userRole;
 

@@ -1,7 +1,7 @@
 package com.cyan.springcloud.common.exception;
 
 
-import com.cyan.springcloud.common.common.ErrorCode;
+import com.cyan.springcloud.common.commons.ErrorCode;
 
 /**
  * 抛异常工具类

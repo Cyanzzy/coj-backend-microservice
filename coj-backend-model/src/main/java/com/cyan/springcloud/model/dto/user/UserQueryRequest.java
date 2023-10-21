@@ -1,6 +1,6 @@
 package com.cyan.springcloud.model.dto.user;
 
-import com.cyan.springcloud.common.common.PageRequest;
+import com.cyan.springcloud.common.commons.PageRequest;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -40,7 +40,7 @@ public class UserQueryRequest extends PageRequest implements Serializable {
     private String userProfile;
 
     /**
-     * 用户角色：user/admin/ban
+     * 用户角色：questionservice/admin/ban
      */
     private String userRole;
 

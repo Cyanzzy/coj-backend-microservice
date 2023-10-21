@@ -34,7 +34,7 @@ public class LoginUserVO implements Serializable {
     private String userProfile;
 
     /**
-     * 用户角色：user/admin/ban
+     * 用户角色：questionservice/admin/ban
      */
     private String userRole;
 

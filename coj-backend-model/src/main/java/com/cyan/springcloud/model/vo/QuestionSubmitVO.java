@@ -11,7 +11,7 @@ import java.util.Date;
 
 /**
  * 题目提交封装类
- * @TableName question
+ * @TableName questionservice
  */
 @Data
 public class QuestionSubmitVO implements Serializable {

@@ -1,8 +1,8 @@
 package com.cyan.springcloud.common.exception;
 
-import com.cyan.springcloud.common.common.BaseResponse;
-import com.cyan.springcloud.common.common.ErrorCode;
-import com.cyan.springcloud.common.common.ResultUtils;
+import com.cyan.springcloud.common.commons.BaseResponse;
+import com.cyan.springcloud.common.commons.ErrorCode;
+import com.cyan.springcloud.common.commons.ResultUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
