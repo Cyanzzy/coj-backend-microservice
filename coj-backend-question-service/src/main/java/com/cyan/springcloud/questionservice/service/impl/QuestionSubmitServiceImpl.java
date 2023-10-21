@@ -18,6 +18,7 @@ import com.cyan.springcloud.model.enums.QuestionSubmitLanguageEnum;
 import com.cyan.springcloud.model.enums.QuestionSubmitStatusEnum;
 import com.cyan.springcloud.model.vo.QuestionSubmitVO;
 import com.cyan.springcloud.questionservice.mapper.QuestionSubmitMapper;
+import com.cyan.springcloud.questionservice.rabbitmq.MyMessageProducer;
 import com.cyan.springcloud.questionservice.service.QuestionService;
 import com.cyan.springcloud.questionservice.service.QuestionSubmitService;
 import org.apache.commons.collections4.CollectionUtils;
@@ -49,6 +50,9 @@ public class QuestionSubmitServiceImpl extends ServiceImpl<QuestionSubmitMapper,
     @Lazy // 出现循环依赖
     @Resource
     private JudgeFeignClient judgeFeignClient;
+
+    @Resource
+    private MyMessageProducer producer;
 
     /**
      * 题目提交
@@ -89,10 +93,14 @@ public class QuestionSubmitServiceImpl extends ServiceImpl<QuestionSubmitMapper,
 
         Long questionSubmitId = questionSubmit.getId();
 
-        // todo 判题服务
-        CompletableFuture.runAsync(()->{
-            judgeFeignClient.doJudge(questionSubmitId);
-        });
+        // 发送消息
+        producer.sendMessage("code_exchange", "my_routingKey", String.valueOf(questionSubmitId));
+
+//        // 执行判题服务
+//        CompletableFuture.runAsync(()->{
+//
+//            judgeFeignClient.doJudge(questionSubmitId);
+//        });
 
         return questionSubmitId;
 
