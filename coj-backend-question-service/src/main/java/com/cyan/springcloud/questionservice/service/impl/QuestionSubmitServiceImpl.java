@@ -3,8 +3,8 @@ package com.cyan.springcloud.questionservice.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.cyan.springcloud.client.service.JudgeService;
-import com.cyan.springcloud.client.service.UserService;
+import com.cyan.springcloud.client.service.JudgeFeignClient;
+import com.cyan.springcloud.client.service.UserFeignClient;
 import com.cyan.springcloud.common.commons.ErrorCode;
 import com.cyan.springcloud.common.constant.CommonConstant;
 import com.cyan.springcloud.common.exception.BusinessException;
@@ -44,11 +44,11 @@ public class QuestionSubmitServiceImpl extends ServiceImpl<QuestionSubmitMapper,
     private QuestionService questionService;
 
     @Resource
-    private UserService userService;
+    private UserFeignClient userFeignClient;
 
     @Lazy // 出现循环依赖
     @Resource
-    private JudgeService judgeService;
+    private JudgeFeignClient judgeFeignClient;
 
     /**
      * 题目提交
@@ -91,7 +91,7 @@ public class QuestionSubmitServiceImpl extends ServiceImpl<QuestionSubmitMapper,
 
         // todo 判题服务
         CompletableFuture.runAsync(()->{
-            judgeService.doJudge(questionSubmitId);
+            judgeFeignClient.doJudge(questionSubmitId);
         });
 
         return questionSubmitId;
@@ -136,7 +136,7 @@ public class QuestionSubmitServiceImpl extends ServiceImpl<QuestionSubmitMapper,
         // 脱敏：仅本人和管理员看见自己（提交userId和用户id不同）提交的代码
         long userId = loginUser.getId();
         // 处理脱敏
-        if (userId != questionSubmit.getUserId() && !userService.isAdmin(loginUser)) {
+        if (userId != questionSubmit.getUserId() && !userFeignClient.isAdmin(loginUser)) {
             questionSubmitVO.setCode(null);
         }
 
