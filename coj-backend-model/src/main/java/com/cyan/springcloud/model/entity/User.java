@@ -11,7 +11,7 @@ import java.util.Date;
  *
  * @author Cyan
  */
-@TableName(value = "questionservice")
+@TableName(value = "user")
 @Data
 public class User implements Serializable {
 
