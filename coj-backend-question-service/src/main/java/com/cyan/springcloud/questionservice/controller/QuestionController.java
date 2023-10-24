@@ -50,8 +50,6 @@ public class QuestionController {
 
     private final static Gson GSON = new Gson();
 
-    // region 增删改查
-
     /**
      * 创建
      *
