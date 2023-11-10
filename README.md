@@ -4,7 +4,6 @@
 # 目录
 
 - [项目介绍](#项目介绍)
-- [界面展示](#界面展示)
 - [项目架构](#项目架构)
 - [技术选型](#技术选型)
 - [项目部署](#项目部署)
@@ -39,24 +38,6 @@
 * 自主实现 **代码沙箱**（安全沙箱）
 * 开放接口（对外服务）
 
-# 界面展示
-> 题目搜索页面
-
-![](https://cyan-images.oss-cn-shanghai.aliyuncs.com/images/docs-oj-01.png)
-
-> 在线答题页面（支持代码编辑器、代码高亮）
-
-![](https://cyan-images.oss-cn-shanghai.aliyuncs.com/images/docs-oj-02.png)
-
-> 题目提交页面
-
-![](https://cyan-images.oss-cn-shanghai.aliyuncs.com/images/docs-oj-03.png)
-
-> 创建题目页面（包含Markdown富文本编辑器、动态增删测试用例）
-
-![](https://cyan-images.oss-cn-shanghai.aliyuncs.com/images/docs-oj-04.png)
-
-![](https://cyan-images.oss-cn-shanghai.aliyuncs.com/images/docs-oj-05.png)![](https://cyan-images.oss-cn-shanghai.aliyuncs.com/images/docs-oj-05.png)
 
 # 项目架构
 
