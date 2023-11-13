@@ -41,12 +41,12 @@
 
 # 项目架构
 
-> 项目架构图
+> 技术架构
 
 ![](https://cyan-images.oss-cn-shanghai.aliyuncs.com/images/docs-oj-21.png)
 
 
-> 业务流程图 
+> 业务流程
 
 ![](https://cyan-images.oss-cn-shanghai.aliyuncs.com/images/docs-oj-06.png)
 
