@@ -53,20 +53,6 @@
 
 # 技术选型
 
-> 前端
-
-* Vue3
-* Vue-CLI 脚手架
-* Vuex 状态管理
-* Arco Design 组件库
-* 前端工程化：ESLint + Prettier + TypeScript
-* 前端项目模板（通用布局、权限管理、状态管理、菜单生成）
-* Markdown 富文本编辑器
-* Monaco Editor 代码编辑器
-* Open API 前端代码生成
-
-> 后端
-
 * Java Spring Cloud + Spring Cloud Alibaba 微服务
   * Nacos 注册中心
   * OpenFeign 客户端调用
